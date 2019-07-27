@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const adminprefix = "m";
-const developers = ["" , "474200581163057153"];
+const adminprefix = "";
+const developers = ["285512631811440641" , ""];
 
 
 client.on('ready', () => {
@@ -30,5 +30,17 @@ client.on('message', message => {
   }
 });
 
+
+client.on('message', msg => {
+  if (msg.content === 'فهد') {
+    msg.channel.send(`**Keep silent ..**`);
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '<@285512631811440641>') {
+    msg.channel.send(`**Keep silent ..**`);
+  }
+});
 
 client.login(process.env.BOT_TOKEN);
